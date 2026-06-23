@@ -59,6 +59,7 @@ body.dark-theme {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -387,34 +388,39 @@ body.dark-theme .theme-toggle .sun-icon {
   font-weight: 700;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: none;
   gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
 }
 
 .btn-primary {
-  background-color: var(--primary);
-  color: white;
-  box-shadow: 0 4px 14px var(--shadow-glow);
+  background: linear-gradient(135deg, var(--primary), #FF1E1F);
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(255, 59, 60, 0.3);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--shadow-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 59, 60, 0.5);
+  background: linear-gradient(135deg, var(--primary-hover), #E0191A);
 }
 
 .btn-outline {
   background-color: transparent;
-  border: 2px solid var(--border);
+  border: 2px solid var(--primary) !important;
   color: var(--text);
+  box-shadow: inset 0 0 0 0 var(--primary);
 }
 
 .btn-outline:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  background-color: var(--primary-light);
-  transform: translateY(-2px);
+  color: white !important;
+  background-color: var(--primary) !important;
+  box-shadow: inset 0 0 0 2rem var(--primary), 0 4px 15px rgba(255, 59, 60, 0.2);
+  transform: translateY(-3px);
 }
 
 /* Hero Section */
@@ -624,10 +630,15 @@ body.dark-theme .theme-toggle .sun-icon {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
-  padding: 2.5rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .stat-box:hover {
@@ -1507,6 +1518,28 @@ textarea.form-control {
   transform: translateY(-3px);
 }
 
+/* Client Logo Premium Look */
+.client-logo {
+  height: 60px;
+  margin: 0 3rem;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(60%);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.client-logo:hover {
+  filter: grayscale(0%) opacity(100%);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .client-logo {
+    margin: 0 1.5rem;
+    height: 45px;
+  }
+}
+
 /* Float Buttons */
 .whatsapp-float {
   position: fixed;
@@ -1549,6 +1582,20 @@ textarea.form-control {
   border-radius: 1.5rem;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-md);
+}
+
+.dashboard-card-lg {
+  padding: 4rem;
+}
+
+.impact-metrics-box {
+  background: var(--surface-alt);
+  padding: 3rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.dashboard-card {
   margin-bottom: 2.5rem;
 }
 
@@ -1737,4 +1784,125 @@ textarea.form-control {
 
 .social-eagle-badge-sm svg {
   vertical-align: middle;
+}
+
+/* Premium Dashboard UI */
+.premium-dashboard-wrapper {
+  background: var(--surface-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.premium-dashboard-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: default;
+}
+
+.premium-dashboard-card:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-glow);
+}
+
+.premium-dashboard-card h4 {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.premium-dashboard-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.premium-dashboard-card .glow-orb {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: var(--primary);
+  filter: blur(80px);
+  opacity: 0.15;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.premium-dashboard-card:hover .glow-orb {
+  opacity: 0.3;
+}
+
+/* Global Mobile View Adjustments */
+@media (max-width: 991px) {
+  .nav-actions a.btn {
+    display: none; /* Hide header buttons on mobile to prevent squishing */
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+  .section-title {
+    font-size: 2.2rem !important;
+  }
+  .hero h1 {
+    font-size: 2.8rem !important;
+  }
+  .hero p {
+    font-size: 1.05rem !important;
+  }
+  .container {
+    padding: 0 1.25rem;
+  }
+  .btn {
+    width: 100%; /* Make buttons full width on small screens when stacked */
+  }
+  .dashboard-card, .dashboard-card-lg {
+    padding: 1.5rem !important; /* Override large inline padding on mobile */
+  }
+  .impact-metrics-box {
+    padding: 1.5rem !important;
+  }
+  .feature-card {
+    padding: 2rem 1.5rem !important; /* Ensure feature cards aren't overly padded on mobile */
+  }
+  .case-metric-pill {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1.25rem;
+  }
+  .case-metric-val {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile Menu Injected Buttons */
+.mobile-header-btns {
+  display: none;
+  flex-direction: column;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 991px) {
+  .mobile-header-btns {
+    display: flex;
+  }
 }

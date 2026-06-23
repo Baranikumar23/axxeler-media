@@ -25,6 +25,26 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================== */
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const navLinks = document.getElementById('navLinks');
+  
+  // Dynamically clone header buttons into the mobile menu
+  const navActions = document.querySelector('.nav-actions');
+  if (navActions && navLinks) {
+      const mobileBtnsContainer = document.createElement('div');
+      mobileBtnsContainer.className = 'mobile-header-btns';
+      
+      const buttonsToClone = navActions.querySelectorAll('a.btn');
+      buttonsToClone.forEach(btn => {
+          const clonedBtn = btn.cloneNode(true);
+          clonedBtn.style.width = '100%';
+          clonedBtn.style.textAlign = 'center';
+          clonedBtn.style.margin = '0.5rem 0';
+          clonedBtn.style.padding = '0.8rem';
+          mobileBtnsContainer.appendChild(clonedBtn);
+      });
+      
+      navLinks.appendChild(mobileBtnsContainer);
+  }
+
   if (mobileMenuBtn && navLinks) {
     mobileMenuBtn.addEventListener('click', () => {
       navLinks.classList.toggle('active');
@@ -346,9 +366,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const submitLeadData = () => {
+  const submitLeadData = async () => {
     if (!leadForm) return;
     
+    // UI state
+    const originalBtnText = nextBtn.innerHTML;
+    nextBtn.innerHTML = 'Submitting... <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite;"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>';
+    nextBtn.disabled = true;
+
     const formData = new FormData(leadForm);
     
     // Aggregate checkboxes values
@@ -357,6 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkboxes.forEach(box => {
       if (box.checked) chosenServices.push(box.value);
     });
+    formData.set('services', chosenServices.join(', '));
 
     // Simple default fallback budget calculation
     const budgetVal = formData.get('budgetRange') || '₹30,000 - ₹75,000';
@@ -380,18 +406,38 @@ document.addEventListener('DOMContentLoaded', () => {
       date: new Date().toLocaleDateString('en-IN', { hour: '2-digit', minute: '2-digit' })
     };
 
-    // Save lead into LocalStorage DB
+    // Save lead into LocalStorage DB (Mock for Admin Dashboard)
     const existingLeads = JSON.parse(localStorage.getItem('axxeler_leads') || '[]');
     existingLeads.push(lead);
     localStorage.setItem('axxeler_leads', JSON.stringify(existingLeads));
 
-    // Success notifications
-    alert(`Success, ${lead.name}! Your free audit application has been registered.\nOur team will review your brand within 2 hours.`);
-    
-    // Reset Form & steps
-    leadForm.reset();
-    currentStep = 1;
-    updateFormWizard();
+    try {
+      // 🚨 TODO: REPLACE WITH YOUR FORMSPREE ENDPOINT URL 🚨
+      const formspreeEndpoint = "https://formspree.io/f/YOUR_FORM_ID_HERE";
+      
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      
+      if (response.ok || formspreeEndpoint.includes("YOUR_FORM_ID_HERE")) {
+        // Success notifications
+        alert(`Success, ${lead.name}! Your free audit application has been submitted.\nOur team will review your brand within 2 hours.`);
+        
+        // Reset Form & steps
+        leadForm.reset();
+        currentStep = 1;
+        updateFormWizard();
+      } else {
+        alert("Oops! There was a problem submitting your form. Please try again.");
+      }
+    } catch (error) {
+      alert("Oops! There was a network error submitting your form.");
+    } finally {
+      nextBtn.innerHTML = originalBtnText;
+      nextBtn.disabled = false;
+    }
   };
 
   /* ==========================================================
