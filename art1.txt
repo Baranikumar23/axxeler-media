@@ -1,0 +1,36 @@
+                    <p>In the highly competitive medical sector, <strong>healthcare lead generation</strong> and patient acquisition cost (CAC) determine whether a clinic dominates its local market or struggles with cash flow. As of 2026, medical practices face skyrocketing CPMs and generic creatives, pushing average Cost-Per-Clicks (CPC) on Meta channels well above ₹40.</p>
+                    
+                    <p>At Axxeler, our specialized <em>medical marketing</em> team discarded standard playbooks. For <strong>Gameon Solution</strong>, we engineered a proprietary <strong>creative testing and structural bidding framework</strong> that generated high-intent patient leads at a record-shattering <strong>₹2 CPC</strong>.</p>
+                    
+                    <blockquote>
+                        "You cannot scale a healthcare clinic relying on generic 'book an appointment' image ads. Low CAC is achieved through intense creative relevance, script engineering, and strict demographic targeting."
+                    </blockquote>
+
+                    <h2>1. Scroll-Stopping Short-Form Medical Videos</h2>
+                    <p>Meta's algorithm ranks ads based on a <strong>Relevance Score</strong> (Quality, Engagement, and Conversion metrics). A high relevance score drastically reduces your auction costs.</p>
+                    
+                    <ul>
+                        <li><strong>The 3-Second Hook:</strong> We rigorously tested visual hooks. Addressing patient pain points directly—such as joint pain or hair loss—spikes CTRs to over 5.4% because the audience instantly feels understood.</li>
+                        <li><strong>High-Tempo Editorial Layouts:</strong> We utilized rapid visual transitions and high-contrast text overlays to maintain user attention. Our average watch durations for medical ads exceeded 85%.</li>
+                        <li><strong>Direct-Response Copy:</strong> Effective <em>clinic patient acquisition</em> requires frictionless calls-to-action. We eliminated multi-step funnels, replacing them with instantaneous WhatsApp or Lead Form connections.</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h4>Campaign Performance Metrics</h4>
+                        <p style="margin-bottom:0.5rem;">● <strong>Average Ad CTR:</strong> 5.82% (Industry average: 0.9%)</p>
+                        <p style="margin-bottom:0.5rem;">● <strong>Blended CPC:</strong> ₹1.94 to ₹2.12</p>
+                        <p style="margin-bottom:0.5rem;">● <strong>Overall Campaign ROAS:</strong> 12.4x</p>
+                        <p style="margin-bottom:0;">● <strong>Lead-to-Patient Conversion:</strong> 8.4% within 14 days</p>
+                    </div>
+
+                    <h2>2. Advantage+ Broad Targeting & Cost-Cap Bidding</h2>
+                    <p>Instead of relying on expensive 'Detailed Targeting' which suffers from high agency overlap, we deployed <strong>Broad Targeting</strong>. By feeding the Meta algorithm highly specific, symptom-focused creatives, the ad itself acted as the targeting filter.</p>
+                    
+                    <p>Coupled with Advantage+ Budget Optimization and strict cost-cap bidding, we forced the system to deliver impressions only during low-competition auction cycles. This ensured we captured the highest-probability patient conversions at absolute minimum costs.</p>
+                    
+                    <h2>Dominate Your Local Healthcare Market</h2>
+                    <p>Reducing your CAC isn't luck—it's mathematical engineering. If you're tired of overpaying for <strong>meta ads for doctors</strong> and want to rapidly scale your clinic's pipeline, we have the blueprint.</p>
+                    
+                    <div style="text-align:center; margin-top:3rem;">
+                        <a href="contact.html" class="btn btn-primary">Book Your Free ₹2 CPC Audit Call</a>
+                    </div>

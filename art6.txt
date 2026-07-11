@@ -1,0 +1,31 @@
+                    <p>Generating leads is easy. Generating leads that have the actual budget and decision-making authority to close a ₹5 Lakh+ retainer is an entirely different engineering challenge. Most <strong>B2B marketing strategies</strong> rely on generic "download this eBook" funnels that attract junior employees and tire-kickers, not enterprise decision-makers.</p>
+                    
+                    <p>At Axxeler, we build inverted marketing funnels for our B2B partners. Instead of casting the widest net possible, we deploy a ruthless <strong>lead disqualification framework</strong> to filter out low-value prospects before they ever enter your CRM.</p>
+                    
+                    <blockquote>
+                        "In high-ticket sales, your time is your most valuable asset. A lead form that anyone can fill out in 3 seconds is a liability. Friction is your ultimate filter for intent."
+                    </blockquote>
+
+                    <h2>The Disqualification Framework for Enterprise Client Acquisition</h2>
+                    <p>High-ticket <strong>B2B lead generation</strong> requires psychological framing. If your ad feels like a typical desperate pitch, a CEO will scroll past. Your copy must immediately establish authority and frame the high price-point as an exclusive asset.</p>
+                    
+                    <ul>
+                        <li><strong>Call Out The Price Immediately:</strong> State your minimum engagement fee directly in the ad copy or on the landing page header. This instantly filters out low-budget prospects and sets a premium anchor.</li>
+                        <li><strong>Strategic Friction is Good:</strong> Do not use simple 2-field lead forms. High-intent buyers seeking a ₹5 Lakh+ solution are willing to fill out an 8-to-10 question qualification survey. This friction actually increases the perceived value of your consultation.</li>
+                        <li><strong>Social Proof Architecture:</strong> B2B buyers don't care about generic 5-star reviews. They want to see highly specific, data-heavy case studies demonstrating exactly how you solved a complex operational bottleneck for a company in their exact industry.</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h4>High-Ticket Funnel Impact</h4>
+                        <p style="margin-bottom:0.5rem;">● <strong>Lead Volume:</strong> Decreased by 40% (Filtering out junk)</p>
+                        <p style="margin-bottom:0.5rem;">● <strong>Sales Call Show-Up Rate:</strong> Increased to 85%</p>
+                        <p style="margin-bottom:0.5rem;">● <strong>Average Deal Size:</strong> Increased by 2.5x</p>
+                        <p style="margin-bottom:0;">● <strong>Sales Cycle Duration:</strong> Shortened by 3 weeks due to pre-framing</p>
+                    </div>
+
+                    <h2>Engineer Your Enterprise Pipeline</h2>
+                    <p>Stop wasting your sales team's time on unqualified calls. Build a high-ticket <strong>sales funnel</strong> that automatically qualifies, frames, and delivers enterprise clients ready to buy.</p>
+
+                    <div style="text-align:center; margin-top:3rem;">
+                        <a href="contact.html" class="btn btn-primary">Build Your B2B Pipeline</a>
+                    </div>
